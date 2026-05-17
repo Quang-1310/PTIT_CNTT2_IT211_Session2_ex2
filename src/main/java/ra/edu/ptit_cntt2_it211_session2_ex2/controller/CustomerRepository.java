@@ -36,7 +36,7 @@ public class CustomerRepository {
         ), HttpStatus.CREATED);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<ApiDataResponse<Customer>> updateCustomer(@RequestBody Customer customer, @PathVariable Long id){
         return new ResponseEntity<>(new ApiDataResponse<>(
                 true,
